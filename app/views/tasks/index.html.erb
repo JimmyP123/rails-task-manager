@@ -1,0 +1,5 @@
+<% @tasks.each do |task| %>
+  <%= task.complete ? "o" : "not yet" %>
+  <%= link_to task.title, task_path(task) %>
+<% end %>
+<%= link_to "new task", new_task_path %>
